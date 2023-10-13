@@ -60,7 +60,7 @@ const RequisitionDetailsForm: React.FC<{
           placeholder="Enter requisition title"
           name="requisitionTitle"
           onChange={e => {
-            // handleChange(e)
+            handleChange(e)
             // console.log(e.target.value)
             setDetails({ ...requisitionDetails, requisitionTitle: e.target.value })
           }}
@@ -74,7 +74,7 @@ const RequisitionDetailsForm: React.FC<{
           placeholder="Enter number of openings"
           name="noOfOpenings"
           onChange={e => {
-            // handleChange(e)
+            handleChange(e)
             // console.log(+e.target.value)
             setDetails({ ...requisitionDetails, noOfOpenings: +e.target.value })
           }}
@@ -88,13 +88,7 @@ const RequisitionDetailsForm: React.FC<{
           name="gender"
           placeholder="Select gender"
           options={genderOptions}
-          onChange={
-            setFieldValue
-            // setDetails({ ...requisitionDetails, noOfOpenings: +e.target.value })
-          }
-          // onChange={(e) => {
-          //   console.log('e.target.value', values?.gender)
-          // }}
+          // onChange={setFieldValue}
           onBlur={setFieldTouched}
           error={errors.gender}
           touched={touched.gender}
@@ -105,7 +99,7 @@ const RequisitionDetailsForm: React.FC<{
           name="urgency"
           placeholder="Select urgency"
           options={urgencyOptions}
-          onChange={setFieldValue}
+          // onChange={setFieldValue}
           onBlur={setFieldTouched}
           error={errors.urgency}
           touched={touched.urgency}
