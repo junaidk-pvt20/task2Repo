@@ -5,10 +5,10 @@ import { IFormInputProps } from "@src/interface/forms";
 import ReactSelect, { Props } from "react-select";
 
 interface IFormSelectProps
-  extends Omit<IFormInputProps, "inputProps" | "type" | "onBlur"> {
+  extends Omit<IFormInputProps, "inputProps" | "type" | "onChange" | "onBlur"> {
   options: { label: string; value: string }[] | any;
   selectProps?: Props;
-  // onChange?: any;
+  onChange?: any;
   onBlur?: any;
 }
 
