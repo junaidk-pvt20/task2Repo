@@ -29,7 +29,7 @@ const FormSelect: React.FC<IFormSelectProps> = ({
   options,
 }) => {
   const theme = useTheme();
-
+  // console.log('onChange', onChange())
   const handleChange = (value: any) => {
     onChange && onChange(name, value?.value);
   };

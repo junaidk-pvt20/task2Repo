@@ -50,6 +50,7 @@ const HomeLayout = () => {
   const handlePage = (pageNumber: PageNumbers) => {
     setPage(pageNumber);
   };
+  // alert("Junaid")
 
   return (
     <Box w="100%">

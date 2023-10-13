@@ -1,5 +1,5 @@
 import { Button, Flex, Box } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import FormInput from "../../components/formComponents/FormInput";
 import FormSelect from "../../components/formComponents/FormSelect";
 import { useFormik } from "formik";
@@ -45,13 +45,13 @@ const RequisitionDetailsForm: React.FC<{
       handleTab(1);
     },
   });
-  useEffect(() => {
+  useMemo(() => {
     setDetails({ ...requisitionDetails, gender: values?.gender })
   }, [values?.gender])
-  useEffect(() => {
+  useMemo(() => {
     setDetails({ ...requisitionDetails, urgency: values?.urgency })
   }, [values?.urgency])
-
+  // alert("Junaid ")
   return (
     <Box width="100%" as="form" onSubmit={handleSubmit as any}>
       <Box width="100%">
@@ -88,7 +88,7 @@ const RequisitionDetailsForm: React.FC<{
           name="gender"
           placeholder="Select gender"
           options={genderOptions}
-          // onChange={setFieldValue}
+          onChange={setFieldValue}
           onBlur={setFieldTouched}
           error={errors.gender}
           touched={touched.gender}
@@ -99,7 +99,7 @@ const RequisitionDetailsForm: React.FC<{
           name="urgency"
           placeholder="Select urgency"
           options={urgencyOptions}
-          // onChange={setFieldValue}
+          onChange={setFieldValue}
           onBlur={setFieldTouched}
           error={errors.urgency}
           touched={touched.urgency}

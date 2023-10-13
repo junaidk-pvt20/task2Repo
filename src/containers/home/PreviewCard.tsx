@@ -13,7 +13,7 @@ import {
   urgencyOptions,
 } from "./constants";
 
-const DataCard: React.FC<{ title: string; children: React.ReactNode; requisitionDetails: IRequisitionDetails }> = ({
+const DataCard: React.FC<{ title: string; children: React.ReactNode; requisitionDetails?: IRequisitionDetails }> = ({
   title,
   children,
   requisitionDetails,

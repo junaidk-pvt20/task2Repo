@@ -28,6 +28,7 @@ const JobDetailsForm: React.FC<{
         handleTab(2);
       },
     });
+
   return (
     <Box width="100%" as="form" onSubmit={handleSubmit as any}>
       <Box width="100%">
