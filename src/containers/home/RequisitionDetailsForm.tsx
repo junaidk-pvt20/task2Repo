@@ -60,7 +60,7 @@ const RequisitionDetailsForm: React.FC<{
           placeholder="Enter requisition title"
           name="requisitionTitle"
           onChange={e => {
-            handleChange(e)
+            // handleChange(e)
             // console.log(e.target.value)
             setDetails({ ...requisitionDetails, requisitionTitle: e.target.value })
           }}
@@ -74,7 +74,7 @@ const RequisitionDetailsForm: React.FC<{
           placeholder="Enter number of openings"
           name="noOfOpenings"
           onChange={e => {
-            handleChange(e)
+            // handleChange(e)
             // console.log(+e.target.value)
             setDetails({ ...requisitionDetails, noOfOpenings: +e.target.value })
           }}
